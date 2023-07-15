@@ -52,18 +52,21 @@
       height: 100%;
       display: flex;
       flex-direction: column;
-      justify-content: space-evenly;
+      
     }
 
     .mark {
       align-items: center;
       background-color: hsl(241, 81%, 54%);
       border-radius: 8%;
+      position: relative;
+      
     }
 
-    .mark h2 {
+    .mark .head_rslt {
       color: hsla(0, 0%, 100%, 0.712);
       font-weight: 700;
+      margin: 50px 0;
     }
 
     .mark .out_of,
@@ -90,17 +93,26 @@
     }
 
     .mark .percent {
-      width: 250px;
+      width: 100%;
+      height: 250px;
+      background-color: hsla(241, 81%, 54%, 0.574);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      bottom: 0;
     }
 
     .mark .percent h2,
     .mark .percent p {
       margin-bottom: 15px;
       color: hsla(0, 0%, 100%, 0.685);
+      width: 250px;
     }
 
     .summary {
       padding: 0 50px;
+      justify-content: space-evenly;
     }
 
     .summary .scores .score {
@@ -113,17 +125,52 @@
       margin: 15px 0;
       padding: 0 15px;
       border-radius: 10px;
+      color: hsl(224, 30%, 27%);
     }
 
     .summary .scores .reaction{
       background-color: hsla(0, 100%, 67%, 0.274);
     }
-    .summary .scores .reaction h3{
+
+    .summary .scores .reaction h3 {
+      width: 45%;
+      display: flex;
+      justify-content: space-evenly;
       color: hsl(0, 100%, 67%);
     }
-    .summary .scores .
-    .summary .scores .
-    .summary .scores .
+
+    .summary .scores .memory {
+      background-color: hsla(39, 100%, 56%, 0.132);
+    }
+
+    .summary .scores .memory h3 {
+      color: hsl(39, 100%, 56%);
+      width: 45%;
+      display: flex;
+      justify-content: space-evenly;
+    }
+
+    .summary .scores .verbal {
+      background-color: hsla(166, 100%, 37%, 0.174);
+    }
+
+    .summary .scores .verbal h3 {
+      color: hsl(166, 100%, 37%);
+      width: 45%;
+      display: flex;
+      justify-content: space-evenly;
+    }
+
+    .summary .scores .visual {
+      background-color: hsla(234, 85%, 45%, 0.171);
+    }
+
+    .summary .scores .visual h3 {
+      color: hsl(234, 85%, 45%);
+      width: 45%;
+      display: flex;
+      justify-content: space-evenly;
+    }
 
     .summary .result_btn {
       width: 100%;
@@ -149,7 +196,7 @@
   <main>
     <section class="result">
       <div class="mark">
-        <h2>Your Result</h2>
+        <h2 class="head_rslt">Your Result</h2>
         <div class="out_of">
           <h2>76</h2>
           <h3>of 100</h3>
@@ -166,19 +213,31 @@
         <h2>Summary</h2>
         <div class="scores">
           <div class="reaction score" >
-            <h3>Reaction</h3>
+            <h3>
+              <img src="assets/images/icon-reaction.svg" alt="reaction icon">
+              <span>Reaction</span> 
+            </h3>
             <p><span>80 </span>/ 100</p>
           </div>
           <div class="memory score">
-            <h3>Memory</h3>
+            <h3>
+              <img src="assets/images/icon-memory.svg" alt="memory icon">
+              Memory
+            </h3>
             <p><span>92 </span>/ 100</p>
           </div>
           <div class="verbal score">
-            <h3>Verbal</h3>
+            <h3>
+              <img src="assets/images/icon-verbal.svg" alt="verbal icon">
+              Verbal
+            </h3>
             <p><span>61</span>/ 100</p>
           </div>
           <div class="visual score">
-            <h3>Visual</h3>
+            <h3>
+              <img src="assets/images/icon-visual.svg" alt="visual icon">
+              Visual
+            </h3>
             <p><span>72 </span>/ 100</p>
           </div>
         </div>
