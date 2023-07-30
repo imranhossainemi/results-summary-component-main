@@ -26,7 +26,7 @@
     }
 
     main {
-      width: 1440px;
+      max-width: 1440px;
       height: 720px;
       display: flex;
       align-items: center;
@@ -60,13 +60,12 @@
       background-color: hsl(241, 81%, 54%);
       border-radius: 8%;
       position: relative;
-      
+      justify-content: space-evenly;
     }
 
     .mark .head_rslt {
       color: hsla(0, 0%, 100%, 0.712);
       font-weight: 700;
-      margin: 50px 0;
     }
 
     .mark .out_of,
@@ -82,7 +81,7 @@
       height: 200px;
       width: 200px;
       border-radius: 50%;
-      background-color: hsl(241, 72%, 46%);
+      background-image: linear-gradient(hsl(241, 72%, 46%) ,hsl(241, 81%, 54%));
       color: hsla(0, 0%, 100%, 0.685);
     }
 
@@ -94,13 +93,9 @@
 
     .mark .percent {
       width: 100%;
-      height: 250px;
-      background-color: hsla(241, 81%, 54%, 0.574);
       display: flex;
       justify-content: center;
       align-items: center;
-      position: absolute;
-      bottom: 0;
     }
 
     .mark .percent h2,
@@ -186,6 +181,83 @@
     .summary .result_btn:hover,
     .summary .result_btn:focus {
       background-color: hsl(241, 81%, 54%);
+    }
+
+    @media screen and (max-width:760px) {
+      main {
+        height: 100%;
+        width: 375px;
+      }
+
+      .result {
+        width: 95%;
+        height: 100%;
+        flex-direction: column;
+        border-radius: 0;
+      }
+
+      .result .mark,
+      .result .summary {
+        width: 100%;
+        height: 400px;
+      }
+
+      .mark {
+        border-bottom-left-radius: 8%;
+        border-top-left-radius: 0%;
+        border-bottom-right-radius: 8%;
+        border-top-right-radius: 0%;
+      }
+
+      .mark .out_of {
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+      }
+
+      .mark .out_of>h2 {
+        font-size: 40px;
+      }
+
+      .mark .percent h2,
+      .mark .percent p {
+        margin-bottom: 15px;
+        color: hsla(0, 0%, 100%, 0.685);
+        width: 200px;
+      }
+
+      .summary {
+        padding: 0 25px;
+      }
+
+      .summary .scores .score {
+        height: 35px;
+        margin: 10px 0;
+        padding: 0 10px;
+        border-radius: 10px;
+      }
+
+      .summary .scores .reaction h3 {
+        width: 50%;
+      }
+
+      .summary .scores .memory h3 {
+        width: 50%;
+      }
+
+      .summary .scores .verbal h3 {
+        width: 50%;
+      }
+
+      .summary .scores .visual h3 {
+        width: 50%;
+      }
+
+      .summary .result_btn {
+        height: 45px;
+        border-radius: 25px;
+        font-size: 16px;
+      }
     }
 
     .attribution { font-size: 11px; text-align: center; }
